@@ -1,0 +1,68 @@
+{
+    "testteam": {
+        "score": 0,
+        "pin": "0000",
+        "teamMembers": [
+            "Test",
+            "Test1"
+        ],
+        "currentWord": "testing",
+        "scrambledWord": "gnitest",
+        "skips": 5,
+        "unjumbles": 0
+    },
+    "they": {
+        "score": 4,
+        "pin": "1111",
+        "teamMembers": [
+            "Silas",
+            "Jeremiah",
+            "Judah"
+        ],
+        "currentWord": "bugsy",
+        "scrambledWord": "SBUYG",
+        "skips": 2,
+        "unjumbles": 0
+    },
+    "atsgang": {
+        "score": 13,
+        "pin": "5555",
+        "teamMembers": [
+            "Joby",
+            "Logan",
+            "Emma",
+            "Grant"
+        ],
+        "currentWord": "house",
+        "scrambledWord": "OSHEU",
+        "skips": 1,
+        "unjumbles": 0
+    },
+    "flappers": {
+        "score": 8,
+        "pin": "2025",
+        "teamMembers": [
+            "Olivia",
+            "Ellie",
+            "Maryanna",
+            "Natalie"
+        ],
+        "currentWord": "fiddlesticks",
+        "scrambledWord": "TDCSIFKLSIDE",
+        "skips": 0,
+        "unjumbles": 0
+    },
+    "20s winners": {
+        "score": 9,
+        "pin": "2468",
+        "teamMembers": [
+            "Marielle",
+            "Grace",
+            "Michael"
+        ],
+        "currentWord": "gams",
+        "scrambledWord": "AGSM",
+        "skips": 3,
+        "unjumbles": 1
+    }
+}

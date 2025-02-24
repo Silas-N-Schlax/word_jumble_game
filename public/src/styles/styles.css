@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+input[type="text"], input[type="number"], input[type="password"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 20px; /* More rounded buttons */
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button.skip, button.unjumble {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 20px;
+  background-color: #28a745; /* Green color for skip */
+  color: #fff;
+  cursor: pointer;
+}
+
+button.unjumble {
+  background-color: #ffc107; /* Yellow color for unjumble */
+}
+
+button.skip:hover {
+  background-color: #218838;
+}
+
+button.unjumble:hover {
+  background-color: #e0a800;
+}
+
+button:disabled {
+  background-color: #ccc; /* Gray color for disabled buttons */
+  cursor: not-allowed;
+}
+
+#question {
+  font-size: 24px;
+  font-weight: bold;
+  color: #007bff; /* Blue color for the rest of the question text */
+  margin: 20px 0;
+}
+
+#feedback {
+  font-size: 18px;
+  color: red;
+}
+
+#unjumbled-word {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00008b; /* Dark blue color for unjumbled word */
+  margin: 10px 0;
+}

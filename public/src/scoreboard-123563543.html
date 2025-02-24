@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scoreboard</title>
+  <link rel="stylesheet" href="styles/scores.css">
+</head>
+<body>
+  <div class="scoreboard-container">
+    <h2>Scoreboard</h2>
+    <div id="scoreboard"></div>
+    <button id="reset-button">Reset Game</button>
+    <div id="admin-controls" style="display: none; margin-top: 10px; text-align: center;">
+      <input type="password" id="admin-password" placeholder="Enter admin password:" style="padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 80%; margin-bottom: 10px;">
+      <button id="submit-password" style="padding: 10px 20px; border-radius: 5px; border: none; background-color: #007bff; color: #fff; cursor: pointer;">Submit</button>
+    </div>
+  </div>
+  <script src="scripts/scores.js"></script>
+  <script>
+    document.getElementById('reset-button').addEventListener('click', () => {
+      const adminControls = document.getElementById('admin-controls');
+      adminControls.style.display = 'block';
+      document.getElementById('admin-password').focus();
+    });
+
+    document.getElementById('submit-password').addEventListener('click', async () => {
+      const passwordInput = document.getElementById('admin-password');
+      const password = passwordInput.value;
+      if (!password) return;
+
+      const response = await fetch('/reset-skips-unjumbles', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password })
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        alert(result.message);
+      } else {
+        alert(result.message || 'Error resetting game');
+      }
+
+      document.getElementById('admin-controls').style.display = 'none';
+      passwordInput.value = '';
+    });
+
+    document.getElementById('admin-password').addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        document.getElementById('submit-password').click();
+      }
+    });
+  </script>
+</body>
+</html>

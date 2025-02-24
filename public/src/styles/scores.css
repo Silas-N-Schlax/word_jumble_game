@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('../images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.scoreboard-container {
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.scoreboard-item {
+  display: flex;
+  flex-direction: column; /* Ensure dropdown is below */
+  align-items: flex-start;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.scoreboard-item:hover {
+  background-color: #f0f0f0;
+}
+
+.scoreboard-item .header {
+  display: flex;
+  align-items: center; /* Align items to the center */
+  justify-content: space-between;
+  width: 100%;
+}
+
+.scoreboard-item .team-name {
+  font-weight: bold;
+  text-transform: capitalize; /* Capitalize first letter of each word */
+  flex-grow: 1; /* Allow team name to take up remaining space */
+  text-align: left; /* Align team name to the left */
+}
+
+.scoreboard-item .score {
+  font-size: 18px;
+  color: #007bff;
+  font-weight: bold; /* Bold the score number */
+  padding-left: 5px; /* Add padding to the left */
+}
+
+.team-members {
+  display: none;
+  padding-left: 20px;
+  list-style-type: disc; /* Bullet points */
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.05); /* Slightly darker background */
+  border-radius: 4px;
+  padding: 10px;
+  width: calc(100% - 40px); /* Ensure within screen limits */
+}
+
+.team-members li {
+  padding: 5px 0;
+  font-family: 'Georgia', serif; /* Slightly fancy text */
+  display: flex;
+  align-items: center;
+}
+
+.team-members li::before {
+  content: '•';
+  margin-right: 10px;
+  color: #000;
+}
+
+.arrow {
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.arrow.down {
+  transform: rotate(90deg);
+}
+
+button {
+  width: calc(50% - 10px);
+  padding: 10px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 20px; /* More rounded buttons */
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #ccc; /* Gray color for disabled buttons */
+  cursor: not-allowed;
+}

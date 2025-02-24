@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Jazz Age Jumble</title>
+  <link rel="stylesheet" href="src/styles/styles.css">
+</head>
+<body>
+  <div id="initial-buttons" class="form-container">
+    <button id="login-button">Log-in</button>
+    <button id="create-team-button">Create Team</button>
+  </div>
+  <div id="login-form" class="form-container" style="display:none;">
+    <h2>Log-in</h2>
+    <form id="login-team-form">
+      <input type="text" id="login-team-name" placeholder="Team Name" required>
+      <input type="password" id="login-team-pin" placeholder="4-digit PIN" required>
+      <button type="submit">Log-in</button>
+    </form>
+  </div>
+  <div id="create-team-form" class="form-container" style="display:none;">
+    <h2>Create Team</h2>
+    <form id="create-team-form">
+      <input type="text" id="create-team-name" placeholder="Team Name" required>
+      <input type="text" id="team-members" placeholder="Team Members (comma separated)" required>
+      <input type="password" id="create-team-pin" placeholder="4-digit PIN" required>
+      <input type="password" id="repeat-team-pin" placeholder="Repeat 4-digit PIN" required>
+      <button type="submit">Create Team</button>
+    </form>
+  </div>
+  <div id="game-form" class="form-container" style="display:none;">
+    <h2 id="question"></h2>
+    <div id="unjumbled-word"></div>
+    <form id="answer-form">
+      <input type="text" id="answer" placeholder="Your Answer" required>
+      <button type="submit">Check Answer</button>
+    </form>
+    <button id="skip-button" class="skip">Skip: 5</button>
+    <button id="unjumble-button" class="unjumble">Unjumble</button>
+    <p id="feedback" style="display:none;"></p>
+  </div>
+  <script src="src/scripts/index.js"></script>
+  <script>
+    document.getElementById('login-button').addEventListener('click', () => {
+      document.getElementById('initial-buttons').style.display = 'none';
+      document.getElementById('login-form').style.display = 'block';
+      document.getElementById('login-team-name').focus();
+    });
+
+    document.getElementById('create-team-button').addEventListener('click', () => {
+      document.getElementById('initial-buttons').style.display = 'none';
+      document.getElementById('create-team-form').style.display = 'block';
+      document.getElementById('create-team-name').focus();
+    });
+  </script>
+</body>
+</html>
